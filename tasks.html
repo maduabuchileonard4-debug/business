@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks | Jarvel Enterprise</title>
+    <link rel="stylesheet" href="business2.css">
+    <link rel="stylesheet" href="tasks.css">
+    <link rel="icon" type="image/png" href="logo.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page">
+
+        <!-- HEADER (same as home page) -->
+        <nav>
+            <div class="log">
+                <div id="log1"><img src="logo.jpg" alt="Jarvel Enterprise" class="log1-img"></div>
+                <div id="jarvel">Jarvel <p>Enterprise</p></div>
+            </div>
+            <div class="notify"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path fill="#c9a227" fill-rule="evenodd" d="m18.5 12.45l1.5 2.6V19h-4.325c-.35 1.71-1.865 3-3.675 3a3.76 3.76 0 0 1-3.675-3H4v-3.95l1.5-2.6V8.5C5.5 4.915 8.415 2 12 2h.5v1.5H12c-2.755 0-5 2.245-5 5v4.355l-1.5 2.6v2.05h13v-2.05l-1.5-2.6V9.5h1.5zM9.89 19c.31.87 1.135 1.5 2.11 1.5h.005c.975 0 1.8-.63 2.11-1.5zM20 5a3 3 0 1 1-6 0a3 3 0 0 1 6 0" clip-rule="evenodd" />
+            </svg></div>
+        </nav>
+
+        <main class="content">
+
+            <!-- TITLE -->
+            <div class="page-title">
+                <h1>Tasks</h1>
+                <p>Complete tasks to earn rewards and grow your Trust Score.</p>
+            </div>
+
+            <!-- FILTER CHIPS -->
+            <div class="chips">
+                <button class="chip active" data-filter="all">All</button>
+                <button class="chip" data-filter="daily">Daily</button>
+                <button class="chip" data-filter="customers">Customers</button>
+                <button class="chip" data-filter="sales">Sales</button>
+            </div>
+
+            <!-- YOUR PROGRESS -->
+            <section class="box" data-cat="summary">
+                <h3 class="label"><span>YOUR PROGRESS</span></h3>
+                <div class="summary">
+                    <div><b>36</b><small>TASK DONE</small></div>
+                    <div><b>5</b><small>ACTIVE</small></div>
+                    <div><b>420</b><small>TRUST SCORE</small></div>
+                </div>
+            </section>
+
+            <!-- DAILY TASKS -->
+            <section class="box" data-cat="daily">
+                <h3 class="label"><span>DAILY TASKS</span></h3>
+
+                <div class="card task">
+                    <div class="circle"><i class="bi bi-people-fill"></i></div>
+                    <div class="grow">
+                        <b>Bring at least 1 customer today</b>
+                        <small>Add one new customer every day</small>
+                    </div>
+                    <button class="task-btn">Start</button>
+                    <div class="progress">
+                        <div class="bar"><i style="width:0%"></i></div>
+                        <div class="meta"><span>0 / 1 customer</span><span class="reward">+₹[reward]</span></div>
+                    </div>
+                </div>
+
+                <div class="card task">
+                    <div class="circle green"><i class="bi bi-calendar-check"></i></div>
+                    <div class="grow">
+                        <b>7-day customer streak</b>
+                        <small>Bring a customer 7 days in a row</small>
+                    </div>
+                    <button class="task-btn">Continue</button>
+                    <div class="progress">
+                        <div class="bar"><i style="width:28%"></i></div>
+                        <div class="meta"><span>2 / 7 days</span><span class="reward">+₹[bonus]</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CUSTOMER TARGETS -->
+            <section class="box" data-cat="customers">
+                <h3 class="label"><span>CUSTOMER TARGETS</span></h3>
+
+                <div class="card task">
+                    <div class="circle"><i class="bi bi-people-fill"></i></div>
+                    <div class="grow">
+                        <b>Bring 10 customers</b>
+                        <small>Total new customers this month</small>
+                    </div>
+                    <button class="task-btn">View</button>
+                    <div class="progress">
+                        <div class="bar"><i style="width:40%"></i></div>
+                        <div class="meta"><span>4 / 10 customers</span><span class="reward">+₹[reward]</span></div>
+                    </div>
+                </div>
+
+                <div class="card task">
+                    <div class="circle purple"><i class="bi bi-lock-fill"></i></div>
+                    <div class="grow">
+                        <b>Bring 25 customers</b>
+                        <small>Unlocks at Trust Score 500</small>
+                    </div>
+                    <button class="task-btn" disabled>Locked</button>
+                    <div class="progress">
+                        <div class="bar"><i style="width:0%"></i></div>
+                        <div class="meta"><span>0 / 25 customers</span><span class="reward">+₹[reward]</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SALES TASKS -->
+            <section class="box" data-cat="sales">
+                <h3 class="label"><span>SALES TASKS</span></h3>
+
+                <div class="card task">
+                    <div class="circle"><i class="bi bi-bag-fill"></i></div>
+                    <div class="grow">
+                        <b>Sell 5 [product name]</b>
+                        <small>Featured product of the week</small>
+                    </div>
+                    <button class="task-btn">View</button>
+                    <div class="progress">
+                        <div class="bar"><i style="width:40%"></i></div>
+                        <div class="meta"><span>2 / 5 sold</span><span class="reward">+₹[reward]</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MONTHLY TARGET -->
+            <section class="monthly" data-cat="monthly">
+                <span class="kicker">OCTOBER TARGET</span>
+                <h2>Achieve your monthly target</h2>
+                <p>Hit your target before the month ends to earn a bonus.</p>
+                <div class="bar"><i style="width:40%"></i></div>
+                <div class="meta"><span>12 / 30 customers</span><span class="reward">15 days left</span></div>
+                <button class="task-btn full">View target</button>
+            </section>
+
+        </main>
+
+        <!-- BOTTOM NAV -->
+        <nav class="bottom-nav">
+            <a href="business2.html"><i class="bi bi-house-fill"></i>Home</a>
+            <a href="tasks.html" class="on"><i class="bi bi-card-checklist"></i>Task</a>
+            <a href="#"><i class="bi bi-rocket-takeoff"></i>Upgrade</a>
+            <a href="#"><i class="bi bi-people-fill"></i>Referrals</a>
+            <a href="#"><i class="bi bi-three-dots"></i>More</a>
+        </nav>
+
+    </div>
+
+    <script src="tasks.js"></script>
+</body>
+</html>
